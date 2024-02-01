@@ -1,10 +1,12 @@
+# kefel.py
 import sys
 
-if len(sys.argv) != 2:
-    print("Please provide a number from 1 to 10 as a command-line argument.")
-    sys.exit(1)
-
-user_input = int(sys.argv[1])
+try:
+    # Python 2
+    user_input = int(raw_input("Enter a number from 1 to 10: "))
+except NameError:
+    # Python 3
+    user_input = int(input("Enter a number from 1 to 10: "))
 
 if 1 <= user_input <= 10:
     for i in range(1, 11):
