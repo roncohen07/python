@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . .
 
-CMD ["python", "kefel.py"]
+CMD ["python3", "kefel.py"]
